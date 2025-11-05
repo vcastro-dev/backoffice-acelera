@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'UnimedSans';
+  font-style: normal;
+  font-weight: 300; /* Light */
+  src: url('UnimedSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UnimedSans';
+  font-style: normal;
+  font-weight: 400; /* Regular */
+  src: url('UnimedSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UnimedSans';
+  font-style: normal;
+  font-weight: 600; /* SemiBold */
+  src: url('UnimedSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UnimedSans';
+  font-style: normal;
+  font-weight: 700; /* Bold */
+  src: url('UnimedSans-Bold.ttf') format('truetype');
+}
+
+/* --- Unimed Slab --- */
+@font-face {
+  font-family: 'UnimedSlab';
+  font-style: normal;
+  font-weight: 300; /* Light */
+  src: url('UnimedSlab-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'UnimedSlab';
+  font-style: normal;
+  font-weight: 400; /* Regular */
+  src: url('UnimedSlab-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'UnimedSlab';
+  font-style: normal;
+  font-weight: 600; /* SemiBold */
+  src: url('UnimedSlab-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'UnimedSlab';
+  font-style: normal;
+  font-weight: 700; /* Bold */
+  src: url('UnimedSlab-Bold.otf') format('opentype');
+}
