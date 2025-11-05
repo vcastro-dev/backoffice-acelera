@@ -3,13 +3,21 @@
     <div class="formgrid grid">
       <div class="field col-12 md:col-6">
         <p-float-label variant="in">
-          <p-auto-complete class="w-full" inputId="filter_status" dropdown showClear />
+          <p-auto-complete
+            class="w-full"
+            inputId="filter_status"
+            dropdown
+            showClear
+            [suggestions]="statusSugestions"
+            (completeMethod)="statusCompleteMethod($event)"
+            [(ngModel)]="form.status"
+          />
           <label for="filter_status">Todos os status</label>
         </p-float-label>
       </div>
       <div class="field col-12 md:col-6">
         <p-float-label variant="in">
-          <p-auto-complete class="w-full" inputId="filter_id" dropdown showClear />
+          <p-auto-complete inputId="filter_id" fluid showClear [(ngModel)]="form.id" />
           <label for="filter_id">Buscar por ID</label>
         </p-float-label>
       </div>
@@ -17,13 +25,29 @@
     <div class="formgrid grid">
       <div class="field col-12 md:col-6">
         <p-float-label variant="in">
-          <p-date-picker fluid inputId="fromDate" showIcon showClear iconDisplay="input" />
+          <p-date-picker
+            fluid
+            inputId="fromDate"
+            showIcon
+            showClear
+            iconDisplay="input"
+            dateFormat="dd/mm/yy"
+            [(ngModel)]="form.fromDate"
+          />
           <label for="fromDate">A partir de (dd/mm/aaa)</label>
         </p-float-label>
       </div>
       <div class="field col-12 md:col-6">
         <p-float-label variant="in">
-          <p-date-picker fluid inputId="toDate" showIcon showClear iconDisplay="input" />
+          <p-date-picker
+            fluid
+            inputId="toDate"
+            showIcon
+            showClear
+            iconDisplay="input"
+            dateFormat="dd/mm/yy"
+            [(ngModel)]="form.toDate"
+          />
           <label for="toDate">Até (dd/mm/aaa)</label>
         </p-float-label>
       </div>
@@ -32,10 +56,12 @@
   <p-divider />
   <div class="flex gap-2 flex-row-reverse">
     <div>
-      <p-button class="w-full" [outlined]="true" severity="secondary">Limpar filtros</p-button>
+      <p-button class="w-full" [outlined]="true" severity="secondary" (onClick)="reset()"
+        >Limpar filtros</p-button
+      >
     </div>
     <div>
-      <p-button class="w-full">Buscar</p-button>
+      <p-button class="w-full" (onClick)="search()">Buscar</p-button>
     </div>
   </div>
 </p-card>
