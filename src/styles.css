@@ -1,7 +1,7 @@
 @import url('app/assets/fonts/UnimedSlab/font-face.css');
 @import url('app/assets/fonts/UnimedSans/font-face.css');
 
-html {
+body {
   font-size: 1rem;
   font-family: 'UnimedSans', sans-serif;
   font-weight: 400;

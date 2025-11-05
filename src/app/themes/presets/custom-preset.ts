@@ -9,6 +9,11 @@ const WHITE = '#FFFFFF';
 
 export const CustomPreset = definePreset(Aura, {
   name: 'custom-preset',
+  primitive: {
+    gray: {
+      50: '#F8F7F7',
+    },
+  },
   semantic: {
     colorScheme: {
       light: {
@@ -36,8 +41,7 @@ export const CustomPreset = definePreset(Aura, {
         },
 
         surface: {
-          ground: '{color.gray.50}',
-          default: '{color.white}',
+          ground: '#F8F7F7',
         },
       },
       dark: {},
@@ -46,7 +50,8 @@ export const CustomPreset = definePreset(Aura, {
   components: {
     card: {
       root: {
-        shadow: '0px 4px 16px -2px #18191A29',
+        shadow: '0px 0.25rem 1rem -0.125rem #18191A29',
+        borderRadius: '0.25rem',
       },
     },
   },
