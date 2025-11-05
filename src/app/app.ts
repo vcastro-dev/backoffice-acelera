@@ -1,11 +1,13 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SearchBox } from './components/search-box/search-box';
+import { DividerModule } from 'primeng/divider';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [DividerModule, SearchBox],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  standalone: true,
 })
 export class App {
   protected readonly title = signal('backoffice-acelera');
