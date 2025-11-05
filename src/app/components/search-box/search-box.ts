@@ -28,43 +28,37 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
 })
 export class SearchBox {
-  statusOptions: CenarioStatus[] = ['Ativo', 'Inativo', 'Pendente'];
-  statusSugestions: CenarioStatus[] = [];
+  status: CenarioStatus[] = ['Ativo', 'Inativo', 'Pendente'];
+  statusSugestions: CenarioStatus[] = [...this.status];
 
-  form = {
-    id: '',
-    status: '',
-    toDate: new Date(),
+  model: Model = {
+    id: null,
+    status: 'Ativo',
     fromDate: new Date(),
+    toDate: new Date(),
   };
-
-  ngOnInit() {
-    this.statusSugestions = [...this.statusOptions];
-  }
 
   statusCompleteMethod(event: any) {
     const query = event.query.toLowerCase();
-    this.statusSugestions = this.statusOptions.filter((status) =>
-      status.toLowerCase().includes(query)
-    );
+    this.statusSugestions = this.status.filter((status) => status.toLowerCase().includes(query));
   }
 
   reset() {
-    this.form = {
-      id: '',
-      status: '',
+    this.model = {
+      id: 0,
+      status: 'Ativo',
       toDate: new Date(),
       fromDate: new Date(),
     };
   }
   search() {
-    console.log(this.form);
+    console.log(this.model);
   }
 }
 
-type Message = {
+type Model = {
   id: number | null;
-  status: CenarioStatus | null;
+  status: CenarioStatus;
   fromDate: Date;
   toDate: Date;
 };

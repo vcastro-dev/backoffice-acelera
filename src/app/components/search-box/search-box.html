@@ -3,6 +3,12 @@
     <div class="formgrid grid">
       <div class="field col-12 md:col-6">
         <p-float-label variant="in">
+          <p-auto-complete inputId="filter_id" fluid showClear [(ngModel)]="model.id" />
+          <label for="filter_id">Buscar por ID</label>
+        </p-float-label>
+      </div>
+      <div class="field col-12 md:col-6">
+        <p-float-label variant="in">
           <p-auto-complete
             class="w-full"
             inputId="filter_status"
@@ -10,15 +16,9 @@
             showClear
             [suggestions]="statusSugestions"
             (completeMethod)="statusCompleteMethod($event)"
-            [(ngModel)]="form.status"
+            [(ngModel)]="model.status"
           />
           <label for="filter_status">Todos os status</label>
-        </p-float-label>
-      </div>
-      <div class="field col-12 md:col-6">
-        <p-float-label variant="in">
-          <p-auto-complete inputId="filter_id" fluid showClear [(ngModel)]="form.id" />
-          <label for="filter_id">Buscar por ID</label>
         </p-float-label>
       </div>
     </div>
@@ -32,7 +32,7 @@
             showClear
             iconDisplay="input"
             dateFormat="dd/mm/yy"
-            [(ngModel)]="form.fromDate"
+            [(ngModel)]="model.fromDate"
           />
           <label for="fromDate">A partir de (dd/mm/aaa)</label>
         </p-float-label>
@@ -46,7 +46,7 @@
             showClear
             iconDisplay="input"
             dateFormat="dd/mm/yy"
-            [(ngModel)]="form.toDate"
+            [(ngModel)]="model.toDate"
           />
           <label for="toDate">Até (dd/mm/aaa)</label>
         </p-float-label>
@@ -56,12 +56,12 @@
   <p-divider />
   <div class="flex gap-2 flex-row-reverse">
     <div>
-      <p-button class="w-full" [outlined]="true" severity="secondary" (onClick)="reset()"
+      <p-button class="w-full" severity="secondary" [outlined]="true" (onClick)="reset()"
         >Limpar filtros</p-button
       >
     </div>
     <div>
-      <p-button class="w-full" (onClick)="search()">Buscar</p-button>
+      <p-button class="w-full" type="submit" (onClick)="search()">Buscar</p-button>
     </div>
   </div>
 </p-card>
