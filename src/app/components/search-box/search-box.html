@@ -1,26 +1,41 @@
 <p-card>
-  <div class="grid">
-    <div class="col">
-      <input type="text" pInputText />
-      <p-float-label variant="in">
-        <p-date-picker inputId="fromDate" showIcon iconDisplay="input" />
-        <label for="fromDate">A partir de (dd/mm/aaa)</label>
-      </p-float-label>
+  <div>
+    <div class="formgrid grid">
+      <div class="field col-12 md:col-6">
+        <p-float-label variant="in">
+          <p-auto-complete class="w-full" inputId="filter_status" dropdown showClear />
+          <label for="filter_status">Todos os status</label>
+        </p-float-label>
+      </div>
+      <div class="field col-12 md:col-6">
+        <p-float-label variant="in">
+          <p-auto-complete class="w-full" inputId="filter_id" dropdown showClear />
+          <label for="filter_id">Buscar por ID</label>
+        </p-float-label>
+      </div>
     </div>
-    <div class="col">
-      <input type="text" pInputText />
-      <p-float-label variant="in">
-        <p-date-picker inputId="toDate" showIcon iconDisplay="input" />
-        <label for="toDate">Até (dd/mm/aaa)</label>
-      </p-float-label>
+    <div class="formgrid grid">
+      <div class="field col-12 md:col-6">
+        <p-float-label variant="in">
+          <p-date-picker fluid inputId="fromDate" showIcon showClear iconDisplay="input" />
+          <label for="fromDate">A partir de (dd/mm/aaa)</label>
+        </p-float-label>
+      </div>
+      <div class="field col-12 md:col-6">
+        <p-float-label variant="in">
+          <p-date-picker fluid inputId="toDate" showIcon showClear iconDisplay="input" />
+          <label for="toDate">Até (dd/mm/aaa)</label>
+        </p-float-label>
+      </div>
     </div>
-    <div class="col">
-      <input type="text" pInputText />
-    </div>
-    <p-divider />
+  </div>
+  <p-divider />
+  <div class="flex gap-2 flex-row-reverse">
     <div>
-      <p-button [outlined]="true" severity="secondary">Limpar filtros</p-button>
-      <p-button>Buscar</p-button>
+      <p-button class="w-full" [outlined]="true" severity="secondary">Limpar filtros</p-button>
+    </div>
+    <div>
+      <p-button class="w-full">Buscar</p-button>
     </div>
   </div>
 </p-card>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DataViewModule } from 'primeng/dataview';
@@ -10,6 +11,7 @@ import { InputTextModule } from 'primeng/inputtext';
 @Component({
   selector: 'app-search-box',
   imports: [
+    AutoCompleteModule,
     ButtonModule,
     CardModule,
     DataViewModule,
