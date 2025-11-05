@@ -1,7 +1,7 @@
 import { definePreset } from '@primeuix/themes';
 import Aura from '@primeuix/themes/aura';
 
-const BRAND_BLUE = '#0D99FF';
+const BRAND_BLUE = '#009ddb';
 const STATUS_GREEN = '#28a745';
 const STATUS_INFO_BLUE = '#3B82F6';
 const STATUS_RED = '#DC3545';
@@ -41,6 +41,13 @@ export const CustomPreset = definePreset(Aura, {
         },
       },
       dark: {},
+    },
+  },
+  components: {
+    card: {
+      root: {
+        shadow: '0px 4px 16px -2px #18191A29',
+      },
     },
   },
 });
