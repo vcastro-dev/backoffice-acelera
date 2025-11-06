@@ -1,13 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment.development';
-
-type CenarioFilter = {
-  id?: string;
-  status?: string;
-  fromDate?: string;
-  toDate?: string;
-};
+import { Filter } from '../../types/filter';
+import { Cenario } from '../../types/cenario/cenario';
+import { map } from 'rxjs';
+import { isArrayOfCenarios } from '../../types/cenario/cenario.guard';
 
 @Injectable({
   providedIn: 'root',
@@ -15,9 +12,18 @@ type CenarioFilter = {
 export class CenarioDataStore {
   constructor(private http: HttpClient) {}
 
-  getCenarios(filter: CenarioFilter) {
-    return this.http.get(environment.API_URL + 'api/v1/cenarios', {
-      params: { ...filter },
-    });
+  getAll(filter?: Filter<Cenario>) {
+    return this.http
+      .get<CenarioDTO[]>(environment.API_URL + '/v1/cenarios', {
+        params: { ...filter },
+      })
+      .pipe(
+        map((response) => {
+          if (isArrayOfCenarios(response)) {
+            return response;
+          }
+          throw new Error('Invalid Cenario data');
+        })
+      );
   }
 }

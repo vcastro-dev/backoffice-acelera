@@ -7,7 +7,7 @@ import { DatePickerModule } from 'primeng/datepicker';
 import { DividerModule } from 'primeng/divider';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { InputTextModule } from 'primeng/inputtext';
-import { CenarioStatus } from '../../types/cenario-status';
+import { CenarioStatus } from '../../types/cenario-status/cenario-status';
 import { FormsModule } from '@angular/forms';
 
 @Component({

@@ -1,5 +1,5 @@
 <p-card
-  ><p-table [value]="cenarios" [paginator]="true" [rows]="10">
+  ><p-table [value]="cenarios()" [paginator]="true" [rows]="10">
     <ng-template #header>
       <tr>
         <th>COTAÇÃO</th>
@@ -12,16 +12,16 @@
     <ng-template #body let-cenario>
       <tr>
         <td>
-          <span>{{ cenario.data.cotacaoId }}</span>
+          <span>{{ cenario.cotacaoId }}</span>
         </td>
         <td>
-          <span>{{ cenario.data.id }}</span>
+          <span>{{ cenario.id }}</span>
         </td>
         <td>
-          <span>{{ cenario.data.status }}</span>
+          <span>{{ cenario.status }}</span>
         </td>
         <td>
-          <span>{{ cenario.data.createdAt.toLocaleDateString() }}</span>
+          <span>{{ cenario.createdAt.toLocaleDateString() }}</span>
         </td>
         <td>
           <p-button
