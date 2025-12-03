@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CenarioDataStore } from './cenario-data-store.';
+import { CenarioProvider } from './cenario.provider';
 
 describe('Cenario', () => {
-  let service: CenarioDataStore;
+  let service: CenarioProvider;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CenarioDataStore);
+    service = TestBed.inject(CenarioProvider);
   });
 
   it('should be created', () => {

@@ -9,7 +9,7 @@ import { isArrayOfCenarios } from '../../types/cenario/cenario.guard';
 @Injectable({
   providedIn: 'root',
 })
-export class CenarioDataStore {
+export class CenarioProvider {
   constructor(private http: HttpClient) {}
 
   getAll(filter?: Filter<Cenario>) {

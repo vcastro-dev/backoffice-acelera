@@ -2,9 +2,9 @@ import { Component, signal } from '@angular/core';
 import { SearchBox } from './components/search-box/search-box';
 import { DividerModule } from 'primeng/divider';
 import { SearchResult } from './components/search-result/search-result';
-import { CenarioDataStore } from './services/cenario/cenario-data-store.';
 import { Cenario } from './types/cenario/cenario';
 import { Filter } from './types/filter';
+import { CenarioProvider } from './providers/cenario/cenario.provider';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ import { Filter } from './types/filter';
   standalone: true,
 })
 export class App {
-  constructor(private cenarioService: CenarioDataStore) {}
+  constructor(private cenarioService: CenarioProvider) {}
   cenarios = signal<Cenario[]>([]);
 
   ngOnInit() {
