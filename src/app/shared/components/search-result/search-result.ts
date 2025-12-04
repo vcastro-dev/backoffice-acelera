@@ -1,12 +1,9 @@
 import { Component, input } from '@angular/core';
-import { CardModule } from 'primeng/card';
-import { TableModule } from 'primeng/table';
-import { Cenario } from '../../types/cenario/cenario';
-import { ButtonModule } from 'primeng/button';
+import { Cenario } from '../../../types/cenario/cenario';
 
 @Component({
   selector: 'app-search-result',
-  imports: [ButtonModule, CardModule, TableModule],
+  imports: [],
   templateUrl: './search-result.html',
   styleUrl: './search-result.css',
   standalone: true,

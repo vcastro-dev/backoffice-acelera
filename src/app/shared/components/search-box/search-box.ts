@@ -1,28 +1,9 @@
-import { Component, input } from '@angular/core';
-import { AutoCompleteModule } from 'primeng/autocomplete';
-import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
-import { DataViewModule } from 'primeng/dataview';
-import { DatePickerModule } from 'primeng/datepicker';
-import { DividerModule } from 'primeng/divider';
-import { FloatLabelModule } from 'primeng/floatlabel';
-import { InputTextModule } from 'primeng/inputtext';
-import { CenarioStatus } from '../../types/cenario-status/cenario-status';
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { CenarioStatus } from '../../../types/cenario-status/cenario-status';
 
 @Component({
   selector: 'app-search-box',
-  imports: [
-    AutoCompleteModule,
-    ButtonModule,
-    CardModule,
-    DataViewModule,
-    DatePickerModule,
-    DividerModule,
-    FloatLabelModule,
-    FormsModule,
-    InputTextModule,
-  ],
+  imports: [],
   templateUrl: './search-box.html',
   styleUrl: './search-box.css',
   standalone: true,
