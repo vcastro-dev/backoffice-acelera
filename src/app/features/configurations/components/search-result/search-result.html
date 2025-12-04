@@ -1,0 +1,29 @@
+<p-card
+  ><p-table [value]="result()" [paginator]="true" [rows]="10">
+    <ng-template #header>
+      <tr>
+        <th>ID</th>
+        <th>VALOR</th>
+        <th>AÇÕES</th>
+      </tr>
+    </ng-template>
+    <ng-template #body let-result>
+      <tr>
+        <td>
+          <span>{{ result.name }}</span>
+        </td>
+        <td>
+          <span>{{ result.value }}</span>
+        </td>
+        <td>
+          <p-button
+            outlined
+            severity="secondary"
+            icon="pi pi-caret-right"
+            (onClick)="editar(result)"
+          ></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>
