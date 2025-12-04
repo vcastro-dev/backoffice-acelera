@@ -18,6 +18,13 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'configurations',
+        loadChildren: () =>
+          import('./features/configurations/configurations.routes').then(
+            (m) => m.CONFIGURATIONS_ROUTES
+          ),
+      },
+      {
         path: '',
         redirectTo: 'integration-logs',
         pathMatch: 'full',

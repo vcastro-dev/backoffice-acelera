@@ -15,8 +15,8 @@ export class AppLayout {
       routerLink: '/',
     },
     {
-      label: 'Schemas',
-      routerLink: '/schemas',
+      label: 'Configurations',
+      routerLink: '/configurations',
     },
   ];
 }
