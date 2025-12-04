@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CenarioStatus } from '../../../types/cenario-status/cenario-status';
+import { PrimengModule } from '../../../ui/primeng/primeng-module';
 
 @Component({
   selector: 'app-search-box',
-  imports: [],
+  imports: [PrimengModule],
   templateUrl: './search-box.html',
   styleUrl: './search-box.css',
   standalone: true,

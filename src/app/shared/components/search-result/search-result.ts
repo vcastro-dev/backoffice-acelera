@@ -1,9 +1,10 @@
 import { Component, input } from '@angular/core';
 import { Cenario } from '../../../types/cenario/cenario';
+import { PrimengModule } from '../../../ui/primeng/primeng-module';
 
 @Component({
   selector: 'app-search-result',
-  imports: [],
+  imports: [PrimengModule],
   templateUrl: './search-result.html',
   styleUrl: './search-result.css',
   standalone: true,
