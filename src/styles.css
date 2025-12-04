@@ -1,5 +1,5 @@
-@import url('app/assets/fonts/UnimedSlab/font-face.css');
-@import url('app/assets/fonts/UnimedSans/font-face.css');
+@import url('assets/fonts/UnimedSlab/font-face.css');
+@import url('assets/fonts/UnimedSans/font-face.css');
 
 body {
   font-size: 1rem;
