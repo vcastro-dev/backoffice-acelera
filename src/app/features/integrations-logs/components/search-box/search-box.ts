@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CenarioStatus } from '../../../types/cenario-status/cenario-status';
-import { PrimengModule } from '../../../ui/primeng/primeng-module';
+import { PrimengModule } from '../../../../ui/primeng/primeng-module';
+import { CenarioStatus } from '../../../../types/cenario-status/cenario-status';
 
 @Component({
   selector: 'app-search-box',

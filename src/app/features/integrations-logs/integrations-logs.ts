@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PrimengModule } from '../../ui/primeng/primeng-module';
-import { SearchBox } from '../../shared/components/search-box/search-box';
-import { SearchResult } from '../../shared/components/search-result/search-result';
+import { SearchBox } from './components/search-box/search-box';
+import { SearchResult } from './components/search-result/search-result';
 import { CenarioProvider } from '../../core/services/cenario/cenario.provider';
 import { Cenario } from '../../types/cenario/cenario';
 

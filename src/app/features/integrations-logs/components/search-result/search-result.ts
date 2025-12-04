@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
-import { Cenario } from '../../../types/cenario/cenario';
-import { PrimengModule } from '../../../ui/primeng/primeng-module';
+import { PrimengModule } from '../../../../ui/primeng/primeng-module';
+import { Cenario } from '../../../../types/cenario/cenario';
 
 @Component({
   selector: 'app-search-result',
