@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  backoffice-acelera-app:
+    image: backoffice-acelera-app
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8080:80'
+    restart: unless-stopped
