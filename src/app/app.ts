@@ -4,7 +4,7 @@ import { DividerModule } from 'primeng/divider';
 import { SearchResult } from './components/search-result/search-result';
 import { Cenario } from './types/cenario/cenario';
 import { Filter } from './types/filter';
-import { CenarioProvider } from './providers/cenario/cenario.provider';
+import { CenarioProvider } from './core/guard/cenario/cenario.provider';
 
 @Component({
   selector: 'app-root',
