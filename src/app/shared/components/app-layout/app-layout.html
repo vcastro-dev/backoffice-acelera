@@ -1,10 +1,24 @@
-<header class="app-header">
-  <h1>Nome do Seu Sistema</h1>
-  <nav>...</nav>
-</header>
+<div class="flex flex-column">
+  <header class="flex">
+    <p-menubar class="w-full" [model]="options" />
+  </header>
 
-<main class="app-main-content">
-  <router-outlet></router-outlet>
-</main>
+  <main class="flex-grow-1 justify-content-center m-4">
+    <div class="mx-auto p-h-full w-10 w-full">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
 
-<footer class="app-footer"></footer>
+  <footer class="flex bg-primary">
+    <div class="flex w-full col">
+      <span class="text-white"> © 2025 Sua Aplicação. </span>
+
+      <div class="flex col">
+        <a href="/privacy" class="text-white p-text-hover-secondary p-mr-3"
+          >Política de Privacidade</a
+        >
+        <a href="/help" class="text-white p-text-hover-secondary">Ajuda e Suporte</a>
+      </div>
+    </div>
+  </footer>
+</div>
