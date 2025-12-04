@@ -54,5 +54,11 @@ export const CustomPreset = definePreset(Aura, {
         borderRadius: '0.25rem',
       },
     },
+    menubar: {
+      root: {
+        background: BRAND_BLUE,
+        borderRadius: '0',
+      },
+    },
   },
 });
