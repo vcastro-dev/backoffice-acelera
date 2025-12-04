@@ -1,9 +1,7 @@
 version: '3.8'
 
 services:
-  backoffice-acelera-app:
-    image: backoffice-acelera-app
-
+  app:
     build:
       context: .
       dockerfile: Dockerfile

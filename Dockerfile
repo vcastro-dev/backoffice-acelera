@@ -7,10 +7,11 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build -- --output-path=/usr/share/nginx/html --configuration production
+RUN npm run build
 
 FROM nginx:alpine
 
-COPY --from=build /usr/share/nginx/html /usr/share/nginx/html
+COPY --from=build app/dist/backoffice-acelera/browser /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
