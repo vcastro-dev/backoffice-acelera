@@ -1,0 +1,43 @@
+<p-card>
+  <div>
+    <div class="field">
+      <p-float-label variant="in">
+        <p-auto-complete
+          class="w-full"
+          inputId="filter_domain"
+          dropdown
+          showClear
+          [suggestions]="domainSugestions"
+          (completeMethod)="domainCompletehMethod($event)"
+          [(ngModel)]="model.domain"
+        />
+        <label for="filter_domain">Domínio</label>
+      </p-float-label>
+    </div>
+    <div class="field">
+      <p-float-label variant="in">
+        <p-auto-complete
+          class="w-full"
+          inputId="filter_schema"
+          dropdown
+          showClear
+          [suggestions]="schemaSugestions"
+          (completeMethod)="schemaCompleteMethod($event)"
+          [(ngModel)]="model.schema"
+        />
+        <label for="filter_schema">Schema</label>
+      </p-float-label>
+    </div>
+  </div>
+  <p-divider />
+  <div class="flex gap-2 flex-row-reverse">
+    <div>
+      <p-button class="w-full" severity="secondary" [outlined]="true" (onClick)="reset()"
+        >Limpar filtros</p-button
+      >
+    </div>
+    <div>
+      <p-button class="w-full" type="submit" (onClick)="search()">Buscar</p-button>
+    </div>
+  </div>
+</p-card>
